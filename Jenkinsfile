@@ -15,7 +15,10 @@ pipeline {
                 bat 'dir'
             }
         }
- 
+  stage('Install') {
+            steps {
+                bat 'mvn install'
+            }
         stage('Clean') {
             steps {
                 bat 'mvn clean'
@@ -28,10 +31,7 @@ pipeline {
             }
         }
 
-        stage('Install') {
-            steps {
-                bat 'mvn install'
-            }
+       
         }
     }
 }
