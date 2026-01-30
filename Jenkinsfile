@@ -15,7 +15,16 @@ pipeline {
                 bat 'dir'
             }
         }
-
+ stages {
+        stage('Clone Repo') {
+            steps {
+                bat '''
+                "C:\\Git\\cmd\\git.exe" clone https://github.com/product-app-aws.git
+                '''
+            }
+        }
+    }
+}
         stage('Clean') {
             steps {
                 bat 'mvn clean'
