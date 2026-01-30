@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         // Set Java home
-        JAVA_HOME = "C:/jdk-21.0.9"
+        JAVA_HOME = "C:/jdk-21.0.7"
         // Add Java and Maven to PATH
         PATH = "${JAVA_HOME}/bin;C:/apache-maven-3.9.11/bin;${env.PATH}"
     }
